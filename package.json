@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server"
+    "start": "concurrently \"node server\" \"node css/stylesServer\" \"node destinations/destinationServer\" \"node accommodations/accommodationServer\" \"node blog/blogServer\" \"node images/imagesServer\" \"node js/jsServer\" \"node pages/pagesServer\" \"node tours/toursServer\""
   },
   "keywords": [],
   "author": "",
@@ -13,5 +13,8 @@
   "type": "commonjs",
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
   }
 }
