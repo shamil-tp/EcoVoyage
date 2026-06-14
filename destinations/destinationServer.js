@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express()
 
-app.get('/',(req,res)=>res.sendFile(path.join(__dirname,"destination.html")))
+app.get('/',(req,res)=>res.sendFile(path.join(__dirname,"destinations.html")))
 app.get('/destination-details/:d',(req,res)=>{
     let destinationNumber = req.params?.d
     return res.sendFile(path.join(__dirname,`destination-details-${destinationNumber}.html`))

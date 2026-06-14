@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"node server\" \"node css/stylesServer\" \"node destinations/destinationServer\" \"node accommodations/accommodationServer\" \"node blog/blogServer\" \"node images/imagesServer\" \"node js/jsServer\" \"node pages/pagesServer\" \"node tours/toursServer\""
+    "start": "node update-ips.js && concurrently \"node server\" \"node css/stylesServer\" \"node destinations/destinationServer\" \"node accommodations/accommodationServer\" \"node blog/blogServer\" \"node images/imagesServer\" \"node js/jsServer\" \"node pages/pagesServer\" \"node tours/tourServer\""
   },
   "keywords": [],
   "author": "",
